@@ -1,0 +1,11 @@
+.app {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 900px;
+}
+
+.restapi,
+.graphqlapi {
+  flex-basis: 50%;
+}
