@@ -54,7 +54,6 @@ const QueryType = new GraphQLObjectType({
         }
       },
       resolve: (root, args) => fetch(`${ BASE_URL }/users/${ args.id }`)
-
         .then(response => response.json())
         .then(data => data.data)
     }

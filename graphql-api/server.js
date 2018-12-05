@@ -5,7 +5,7 @@ import cors from 'cors';
 
 import schema from './schema'
 
-const APP_PORT = 5000;
+const APP_PORT = process.env.PORT || 5000;
 
 const app  = express();
 
@@ -15,7 +15,6 @@ app.use(cors({
   origin: true,
   credentials: true
 }));
-
 app.use(graphqlHTTP({
     graphiql: true,
     schema,
@@ -23,7 +22,7 @@ app.use(graphqlHTTP({
 }));
 
 try {
-  app.listen(APP_PORT, () => console.log(`GraphQL server running at ${APP_PORT}`))
+  app.listen(APP_PORT, () => console.log(`GraphQL server running at ${ APP_PORT }`))
 } catch (error) {
-  console.log(`Something went wrong ${error}`)
+  console.log(`Something went wrong ${ error }`)
 }

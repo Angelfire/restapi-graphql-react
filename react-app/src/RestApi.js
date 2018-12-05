@@ -22,7 +22,7 @@ class RestApi extends Component {
       <div className="restapi">
         <h2>REST API Data</h2>
         <ul>
-        { !isLoading ? users.map(user => <li key={user.id}>{user.name} - {user.email}</li>) : <p>Loading</p> }
+        { !isLoading ? users.map(user => <li key={ user.id }>{ user.name } - { user.email }</li>) : <p>Loading</p> }
         </ul>
       </div>
     );
